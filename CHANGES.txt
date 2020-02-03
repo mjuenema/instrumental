@@ -1,0 +1,105 @@
+Next Release
+============
+
+0.5.1
+=====
+
+Features
+--------
+
+- Tests now pass under Python 2.7 and 3.3
+
+0.5.0
+=====
+
+Features
+--------
+
+- We now serialize the coverage data to file and report on that
+- Using the --label or --file optiions allow you to specify the name of the coverage file
+- The `instrumental-tools` script can combine multiple coverage files into one
+
+Bug Fixes
+---------
+
+- Fixed run.py to more properly provide a __main__ to executed scripts
+
+
+0.4.0
+=====
+
+Features
+--------
+
+- A stable release!
+
+0.4b4
+=====
+
+Bug Fixes
+---------
+
+- Repaired (nominal) Python3 compatibility
+
+0.4b3
+=====
+
+Bug Fixes
+---------
+
+- Fixed instrumentation of modules not present when instrumental was invoked
+
+0.4b2
+=====
+
+Bug Fixes
+---------
+
+- Removed some extraneous print statements
+
+0.4b1
+=====
+
+Features
+--------
+
+- The pragma: no cond system. See the documentation for more information
+- We now instrumenta and report on comparisons (unless told not to)
+- We now ignore cases unreachable because of literals (unless told not to)
+- The inspection and instrumentation phases are no separated. Now non-imported
+  modules are represented as missed coverage.
+
+0.3.3
+=====
+
+Bug Fixes
+--------
+
+- pragma: no cover now works again for statement coverage
+
+0.3.2
+=====
+
+Bug Fixes
+---------
+
+- The IfExp node (a if bool else b) is now instrumented and coverage is reported.
+
+0.3.1
+=====
+
+Features
+--------
+
+- Statement coverage: Added the ability to gather and report on statement coverage.
+- HTML output: Added an option to produce an html coverage report detailing statement
+  and decision/condition coverage.
+- XML output: Added an option to produce a Cobertura-compatible XML coverage report that
+  can be used by Jenkins to track coverage metrics.
+- Test coverage: Added a bunch of new tests around instrumentation. Not enough, but some
+
+Bug Fixes
+---------
+
+- Package coverage reporting: fixed package coverage reporting when running nosetests;
+  we now instrument __init__.py files.
